@@ -60,6 +60,7 @@ class Dev(Configuration):
       'allauth.socialaccount',
       'allauth.socialaccount.providers.google',
       'rest_framework',
+      'drf_yasg',
   ]
 
   MIDDLEWARE = [
@@ -73,6 +74,13 @@ class Dev(Configuration):
   #     'django.middleware.clickjacking.XFrameOptionsMiddleware',
   ]
   
+      SWAGGER_SETTINGS = {
+        "SECURITY_DEFINITIONS": {
+            "Token": {"type": "apiKey", "name": "Authorization", "in": "header"},
+            "Basic": {"type": "basic"},
+        }
+    }
+
   INTERNAL_IPS = ['192.168.11.179']
   ROOT_URLCONF = 'blango.urls'
 
