@@ -74,7 +74,7 @@ class Dev(Configuration):
   #     'django.middleware.clickjacking.XFrameOptionsMiddleware',
   ]
   
-      SWAGGER_SETTINGS = {
+  SWAGGER_SETTINGS = {
         "SECURITY_DEFINITIONS": {
             "Token": {"type": "apiKey", "name": "Authorization", "in": "header"},
             "Basic": {"type": "basic"},
