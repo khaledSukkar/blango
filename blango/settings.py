@@ -137,7 +137,8 @@ class Dev(Configuration):
   }
 
   WSGI_APPLICATION = 'blango.wsgi.application'
-
+  MEDIA_ROOT = BASE_DIR / "media"
+  MEDIA_URL = "/media/"
 
   # Database
   # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
